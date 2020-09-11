@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import 'styles/index.less';
 import Home from "pages/Home";
 import Standard from 'pages/Standard';
+import Workshops from 'pages/Workshops';
 import Contact from "components/Contact";
 
 const App: React.FC = () => {
@@ -13,6 +14,9 @@ const App: React.FC = () => {
         <Switch>
           <Route path="/" exact>
             <Home />
+          </Route>
+          <Route path="/workshops" exact>
+            <Workshops />
           </Route>
           <Route path="/standard" exact>
             <Standard />
