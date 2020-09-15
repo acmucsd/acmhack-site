@@ -13,7 +13,7 @@ const Description = ({ title, content, sideImage }: DescriptionProps) => {
       <h2 className="header">{title}</h2>
       <div className="content-wrapper">
         <p className="content">{content}</p>
-        <img className="side-image" src={HackLogo} />
+        <img className="side-image" src={HackLogo} alt="description-side" />
       </div>
     </div>
   );
