@@ -4,6 +4,7 @@ import calendar from 'assets/calendar.svg';
 import EventList from 'containers/Events/EventsListContainer';
 import NavBar from 'components/NavBar';
 import './style.less';
+import Description from 'components/Description';
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
       <LandingCard />
       <div className='container'>
         <h2>Content</h2>
-        <p>Who we are!</p>
+        <Description title='Previous Workshops' content='content goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes herecontent goes' />
         <h2>Events <img alt="calendar icon" src={calendar}></img> </h2>
         <p>Participate in fun activities!</p>
         <EventList limit={4}/>

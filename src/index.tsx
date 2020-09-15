@@ -18,8 +18,8 @@ const App: React.FC = () => {
             <WorkshopPage />
           </Route>
         </Switch>
-        <Contact />
       </div>
+        <Contact />
     </Router>
   );
 };

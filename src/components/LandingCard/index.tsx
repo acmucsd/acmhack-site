@@ -14,7 +14,7 @@ const LandingCard: React.FC = () => {
           <div>V</div>
         </div>
         <span className='landing-text'>
-          <h1 className="landing-title">ACM Design</h1>
+          <h1 className="landing-title">ACM Hack</h1>
           <p className='landing-slogan'>slogan</p>
         </span>
       </div>

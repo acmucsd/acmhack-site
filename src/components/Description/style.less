@@ -1,0 +1,29 @@
+@import '../../styles/base.less';
+
+.Description {
+  .header {
+    font-weight: 600;
+  }
+  .content-wrapper {
+    display: flex;
+    max-width: 80%;
+    @media screen and (max-width: @lg) {
+      max-width: 100%;
+    }
+    @media screen and (max-width: @md) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+    
+    .content {
+      margin-right: 1rem;
+    }
+    .side-image {
+      @media screen and (max-width: @md) {
+        margin: auto;
+      }
+      width: 14rem;
+    }
+  } 
+  
+}
