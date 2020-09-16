@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/NavBar';
-import EventList from 'containers/Events/EventsListContainer';
+import HackEventList from 'containers/HackEvents/EventsListContainer';
 import './style.less';
 
 const Workshops: React.FC = () => {
@@ -28,7 +28,7 @@ const Workshops: React.FC = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Vitae augue curabitur in sapien, volutpat lacus.
         </p>
-        <EventList limit={4} />
+        <HackEventList limit={4} type={'hack.py'}/>
         <h2>
           Hackschool
         </h2>
@@ -36,7 +36,7 @@ const Workshops: React.FC = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Vitae augue curabitur in sapien, volutpat lacus.
         </p>
-        <EventList limit={4} />
+        <HackEventList limit={4} type={'hackschool'}/>
       </div>
     </div>
   );

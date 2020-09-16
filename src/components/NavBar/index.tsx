@@ -50,6 +50,9 @@ const NavBar: React.FC = () => {
           <li>
             <Link to="#description" onClick={scrollToDescription}>About Us</Link>
           </li>
+          <li>
+            <Link to="/workshops">Workshops</Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-mobile-div">
