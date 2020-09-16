@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import 'styles/index.less';
 import Home from "pages/Home";
+import Workshops from 'pages/Workshops';
 import Contact from "components/Contact";
-import WorkshopPage from "pages/Workshops";
 
 const App: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const App: React.FC = () => {
             <Home />
           </Route>
           <Route path="/workshops" exact>
-            <WorkshopPage />
+            <Workshops />
           </Route>
         </Switch>
       </div>

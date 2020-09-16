@@ -45,10 +45,10 @@ const NavBar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="/#team" onClick={scrollToTeam}>Team</Link>
+            <Link to="/workshops">Workshops</Link>
           </li>
           <li>
-            <Link to="/workshops">Workshops</Link>
+            <Link to="/#team" onClick={scrollToTeam}>Team</Link>
           </li>
           <li>
             <Link to="/#description" onClick={scrollToDescription}>About Us</Link>

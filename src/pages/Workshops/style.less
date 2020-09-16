@@ -1,11 +1,14 @@
-@import './../../styles/base.less';
+@import './../../styles/vars.less';
 
-.WorkshopPage {
-  background-color: @white;
-  color: @gray;
+.workshops {
+  color: @black;
   .container {
     padding: 2rem;
-    padding-top: 6rem;
-    min-height: calc(100vh - 6rem);
+  }  
+  .workshop-content {
+    padding-top: 75px;
+    h2 {
+      color: @primary-color;
+    }
   }
 }
