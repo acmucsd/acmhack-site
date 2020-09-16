@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import 'styles/index.less';
 import Home from "pages/Home";
-import Standard from 'pages/Standard';
 import Contact from "components/Contact";
+import WorkshopPage from "pages/Workshops";
 
 const App: React.FC = () => {
   return (
@@ -14,12 +14,12 @@ const App: React.FC = () => {
           <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/standard" exact>
-            <Standard />
+          <Route path="/workshops" exact>
+            <WorkshopPage />
           </Route>
         </Switch>
-        <Contact />
       </div>
+        <Contact />
     </Router>
   );
 };
