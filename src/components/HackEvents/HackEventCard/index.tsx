@@ -11,21 +11,6 @@ import  { ReactComponent as VideoCamera } from '../../../assets/videocamera.svg'
 export type EventCardProps = {
   /**
    * Event to display as a card
-   * export type EventObject = {
-  uuid: string;
-  organization: string;
-  committee: string;
-  cover: string;
-  title: string;
-  description: string;
-  location: string;
-  eventLink: string | null;
-  start: string;
-  end: string;
-  pointValue: number;
-  requiresStaff: boolean;
-  staffPointBonus: number;
-}; TODO delete this comment
    */
   event: EventObject,
   type: string
