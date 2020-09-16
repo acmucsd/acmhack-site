@@ -7,6 +7,7 @@ export type DescriptionProps = {
   content: string;
   sideImage?: string;
 }
+
 const Description = ({ title, content, sideImage }: DescriptionProps) => {
   return (
     <div className="Description">
