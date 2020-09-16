@@ -40,18 +40,18 @@ const NavBar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="#contact" onClick={scrollToContacts}>
+            <Link to="/#contact" onClick={scrollToContacts}>
               Contact
             </Link>
           </li>
           <li>
-            <Link to="#team" onClick={scrollToTeam}>Team</Link>
-          </li>
-          <li>
-            <Link to="#description" onClick={scrollToDescription}>About Us</Link>
-          </li>
-          <li>
             <Link to="/workshops">Workshops</Link>
+          </li>
+          <li>
+            <Link to="/#team" onClick={scrollToTeam}>Team</Link>
+          </li>
+          <li>
+            <Link to="/#description" onClick={scrollToDescription}>About Us</Link>
           </li>
         </ul>
       </div>

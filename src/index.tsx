@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import 'styles/index.less';
 import Home from "pages/Home";
-import Standard from 'pages/Standard';
 import Workshops from 'pages/Workshops';
 import Contact from "components/Contact";
 
@@ -18,12 +17,9 @@ const App: React.FC = () => {
           <Route path="/workshops" exact>
             <Workshops />
           </Route>
-          <Route path="/standard" exact>
-            <Standard />
-          </Route>
         </Switch>
-        <Contact />
       </div>
+        <Contact />
     </Router>
   );
 };

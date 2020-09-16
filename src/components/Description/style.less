@@ -1,0 +1,26 @@
+@import '../../styles/base.less';
+
+.Description {
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (max-width: @md) {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+    
+    .content {
+      margin-right: 1rem;
+      flex-basis: 66%;
+    }
+    .side-image {
+      @media screen and (max-width: @md) {
+        margin: auto;
+      }
+      flex-basis: 20%;
+      width: 18rem;
+    }
+  } 
+  
+}
