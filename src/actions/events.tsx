@@ -6,6 +6,8 @@ import {
   siteConfigs
 } from "configs";
 
+import hackEvents from '../assets/hackevents.json';
+
 export type EventsResponse = {
   error: any;
   events: EventsArray;
@@ -27,6 +29,9 @@ export type EventObject = {
   pointValue: number;
   requiresStaff: boolean;
   staffPointBonus: number;
+  virtual?: boolean;
+  github?: string,
+  facebook?: string
 };
 
 const handleErrors = (response: Response): Promise < EventsResponse > => {
@@ -48,5 +53,13 @@ export const getAllCommunityEvents = async (limit: number = -1): Promise < Event
     return result.events.reverse();
   } catch (error) {
     return undefined;
+  }
+};
+
+export const getHackData = (key: string): EventsArray => {
+  if (key === 'hack.py') {
+    return hackEvents['hack.py'];
+  } else {
+    return hackEvents['hackschool'];
   }
 };
