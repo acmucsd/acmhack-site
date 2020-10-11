@@ -16,7 +16,7 @@ export type EventCardProps = {
   type: string
 }
 
-const EventCard = ({ event, type }: EventCardProps) => {
+const HackEventCard = ({ event, type }: EventCardProps) => {
   const [timeString, setTimeString] = useState("");
   useEffect(() => {
     setTimeString(`${formatDateToTimeWithAMPM(event.start)} - ${formatDateToTimeWithAMPM(event.end)}`);
@@ -60,4 +60,4 @@ const EventCard = ({ event, type }: EventCardProps) => {
   );
 };
 
-export default EventCard;
+export default HackEventCard;
