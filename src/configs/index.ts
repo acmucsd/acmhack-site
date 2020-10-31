@@ -10,5 +10,5 @@ export const siteConfigs = {
     instagram: "https://www.instagram.com/acm.ucsd/",
   },
   contactEmail: "hack@acmucsd.org",
-  committee: "hack"
+  committee: "Hack"
 }
