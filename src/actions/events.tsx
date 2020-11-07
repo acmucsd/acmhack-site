@@ -55,7 +55,6 @@ export const getAllCommunityEvents = async (limit: number = -1): Promise < Event
     return undefined;
   }
 };
-
 export const getHackData = (key: string): EventsArray => {
   if (key === 'hack.py') {
     return hackEvents['hack.py'];
