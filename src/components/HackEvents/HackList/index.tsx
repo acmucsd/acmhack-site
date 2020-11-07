@@ -7,14 +7,14 @@ export type EventListProps = {
   events: Array<EventObject>,
   type: string
 }
-const EventList = ({ events, type }: EventListProps) => {
+const HackEventList = ({ events, type }: EventListProps) => {
   return (
     <div className="EventList">
       {events.map((event) => {
-        return <HackEventCard event={event} type={type} />
+        return <HackEventCard event={event} type={type} key={event.uuid} />
       })}
     </div>
   );
 };
 
-export default EventList;
+export default HackEventList;

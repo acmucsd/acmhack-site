@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { getAllCommunityEvents, EventObject } from 'actions/events';
+import React from 'react';
+import { getHackData } from 'actions/events';
 import HackEventList from 'components/HackEvents/HackList';
 
-type EventsListContainerProps = {
+type EventsListContainerProps = { 
   /**
    * Max number of events to display
    */
@@ -10,14 +10,11 @@ type EventsListContainerProps = {
   type: string
 }
 const EventsListContainer = ({ limit, type }: EventsListContainerProps) => {
-  const [events, setEvents] = useState<Array<EventObject>>([]);
+  /* const [events, setEvents] = useState<Array<EventObject>>([]);
   useEffect(() => {
-    getAllCommunityEvents(limit).then((events) => {
-      if (events) {
-        setEvents(events);
-      }
-    });
-  }, [limit]);
+    setEvents(getHackData(type).slice(0, limit));
+  }, [limit]); */
+  let events = getHackData(type).slice(0, limit);
   return (
     <HackEventList type={type} events={events} />
   );

@@ -16,7 +16,7 @@ export type EventCardProps = {
   type: string
 }
 
-const EventCard = ({ event, type }: EventCardProps) => {
+const HackEventCard = ({ event, type }: EventCardProps) => {
   const [timeString, setTimeString] = useState("");
   useEffect(() => {
     setTimeString(`${formatDateToTimeWithAMPM(event.start)} - ${formatDateToTimeWithAMPM(event.end)}`);
@@ -24,8 +24,8 @@ const EventCard = ({ event, type }: EventCardProps) => {
 
   let cover = event.cover == null ? 'https://imgur.com/9yC0xBz.png' : event.cover;
   let location = event.location == null ? 'https://acmurl.com/hack' : event.location;
-  let facebooklink = 'https://www.facebook.com/acmucsd';
-  let githublink = `https://github.com/acmucsd/${type}`;
+  let facebooklink = event.facebook == null ? 'https://www.facebook.com/acmucsd' : event.facebook;
+  let githublink = event.github == null ? 'https://github.com/acmucsd/' : event.github;
 
   return (
     <div className="hack-event-card-wrapper">
@@ -60,4 +60,4 @@ const EventCard = ({ event, type }: EventCardProps) => {
   );
 };
 
-export default EventCard;
+export default HackEventCard;
