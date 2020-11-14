@@ -24,7 +24,7 @@ const EventCard = ({ event }: EventCardProps) => {
       <h1 className="title">
         {event.title}
       </h1>
-      <p>{isURL(event.location) ? <a target="_blank" rel="noopener noreferrer" href={getAbsoluteURL(event.location)}>{event.location}</a> : event.location}</p>
+      <p className="link">{isURL(event.location) ? <a target="_blank" rel="noopener noreferrer" href={getAbsoluteURL(event.location)}>{event.location}</a> : event.location}</p>
       <div className="time">
         <p>{timeString}</p>
       </div>
