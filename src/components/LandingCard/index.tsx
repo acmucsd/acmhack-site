@@ -1,4 +1,5 @@
 import React from 'react';
+import TypistLoop from '../TypistLoop';
 import leftside from 'assets/left_diamonds.svg';
 import rightside from 'assets/right_diamonds.svg';
 import arrow from 'assets/arrow.svg';
@@ -16,7 +17,7 @@ const LandingCard: React.FC = () => {
         </div>
         <span className="landing-text">
           <h1 className="landing-title">ACM Hack</h1>
-          <p className="landing-slogan">slogan</p>
+          <TypistLoop words={['Empowering our community of software engineers.', 'Building cool things with code.']} />
         </span>
       </div>
     </div>
