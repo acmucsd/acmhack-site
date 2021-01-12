@@ -4,26 +4,24 @@
   color: @white;
   background-color: @primary-color;
   overflow: hidden;
-
   .backdrop-wrapper {
     text-align: center;
     width: 100%;
     max-height: 100vh;
     height: 760px;
     position: relative;
-    display:table;
-    
+    display: table;
     .backdrop-left {
       z-index: 0;
       left: -100px;
       overflow: hidden;
       top: 108px;
       position: absolute;
-      @media screen and (max-width: @lg + 550px){
+      @media screen and (max-width: @lg + 550px) {
         left: auto;
         right: @lg + 50px;
       }
-      @media screen and (max-width: @lg + 100px){
+      @media screen and (max-width: @lg + 100px) {
         display: none;
       }
     }
@@ -36,7 +34,7 @@
       @media screen and (max-width: @lg + 100px) {
         right: -72px;
       }
-      @media screen and (max-width: @md) { 
+      @media screen and (max-width: @md) {
         display: none;
       }
     }
@@ -45,7 +43,7 @@
     z-index: 1;
     position: relative;
     display: table-cell;
-    vertical-align:middle;
+    vertical-align: middle;
     margin-top: -5rem;
     color: @white;
     margin-left: 10rem;
@@ -60,10 +58,9 @@
   }
   .arrow {
     position: absolute;
-    bottom: 1rem;
+    bottom: 2rem;
     text-align: center;
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 1.5rem;
     width: 100%;
   }
 }

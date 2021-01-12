@@ -2,9 +2,7 @@
  * Fetching events
  */
 
-import {
-  siteConfigs
-} from "configs";
+import { siteConfigs } from 'configs';
 
 import hackEvents from '../assets/hackevents.json';
 
@@ -30,18 +28,18 @@ export type EventObject = {
   requiresStaff: boolean;
   staffPointBonus: number;
   virtual?: boolean;
-  github?: string,
-  facebook?: string
+  github?: string;
+  facebook?: string;
 };
 
-const handleErrors = (response: Response): Promise < EventsResponse > => {
+const handleErrors = (response: Response): Promise<EventsResponse> => {
   if (!response.ok) {
     throw Error(response.statusText);
   }
   return response.json();
 };
 
-export const getAllCommunityEvents = async (limit: number = -1): Promise < EventsArray | undefined > => {
+export const getAllCommunityEvents = async (limit: number = -1): Promise<EventsArray | undefined> => {
   let apiurl = `https://acmucsd-membership-portal-api.herokuapp.com/api/v2/event/future?committee=${siteConfigs.committee}&limit=${limit}`;
   if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
     apiurl = `https://acmucsd-portal-testing.herokuapp.com/api/v2/event?committee=${siteConfigs.committee}`;

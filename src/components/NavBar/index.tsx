@@ -40,7 +40,7 @@ const NavBar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="/#contact" onClick={scrollToContacts}>
+            <Link to="#contact" onClick={scrollToContacts}>
               Contact
             </Link>
           </li>
@@ -48,10 +48,14 @@ const NavBar: React.FC = () => {
             <Link to="/workshops">Workshops</Link>
           </li>
           <li>
-            <Link to="/#team" onClick={scrollToTeam}>Team</Link>
+            <Link to="#team" onClick={scrollToTeam}>
+              Team
+            </Link>
           </li>
           <li>
-            <Link to="/#description" onClick={scrollToDescription}>About Us</Link>
+            <Link to="#description" onClick={scrollToDescription}>
+              About Us
+            </Link>
           </li>
         </ul>
       </div>
@@ -67,20 +71,20 @@ const NavBar: React.FC = () => {
       </div>
       <div className="wainbow" />
       <div className="mobile-links">
-        <Link to="#description"
+        <Link
+          to="#description"
           onClick={(): void => {
             toggleMenu();
             scrollToDescription();
-          }}
-        >
+          }}>
           About Us
         </Link>
-        <Link to="#team"
+        <Link
+          to="#team"
           onClick={(): void => {
             toggleMenu();
             scrollToTeam();
-          }}
-        >
+          }}>
           Team
         </Link>
         <Link
@@ -88,8 +92,7 @@ const NavBar: React.FC = () => {
           onClick={(): void => {
             toggleMenu();
             scrollToContacts();
-          }}
-        >
+          }}>
           Contact
         </Link>
       </div>
