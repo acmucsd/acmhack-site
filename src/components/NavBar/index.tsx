@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logotext.svg';
@@ -26,8 +26,8 @@ const NavBar: React.FC = () => {
   }; 
 
   React.useEffect(() => {
-    const elementId = location.hash ? location.hash.slice(1) : 'top';
-    document.getElementById(elementId)?.scrollIntoView({ behavior: 'smooth' });
+    const elementToScroll = location.hash ? location.hash.slice(1) : 'top';
+    document.getElementById(elementToScroll)?.scrollIntoView({ behavior: 'smooth' });
   }, [location]);
 
   return (
