@@ -13,7 +13,15 @@ const Home = () => {
       <NavBar />
       <LandingCard />
       <div className="container">
-        <Description />
+        <Description
+          title="Yes, we like to code."
+          text="
+          We are a community in ACM @ UCSD focused on learning more about software engineering and exploring what is possible through code.
+          We frequently host workshop aimed at empowering students to create amazing projects, as well as events to help students learn more
+          about software engineering and finding their path. Our events are for people of all skill levels, so whether you're a first-time
+          coder or a skilled programmer, we'd be happy to have you join the ACM Hack community!
+        "
+        />
         <h2>
           Events <img alt="calendar icon" src={calendar}></img>{' '}
         </h2>
