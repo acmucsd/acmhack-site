@@ -9,7 +9,7 @@ const Workshops: React.FC = () => {
     <div className="page workshops">
       <Navbar />
       <div className="container workshop-content">
-        <h2>hack.py</h2>
+        <h2 id='top'>hack.py</h2>
         <h4>Winter 2021</h4>
         <p>hack.py is our 7 part workshop series teaching everything you need to know about Python. We start from the fundamentals of the language, then move on to its applications such as building a web server, web scraping, data anlytics, and etc. We're open to all skill levels, whether you're an experienced coder or never touched a line of code yourself. </p>
         <HackEventList type={'hack.py'} />
@@ -24,7 +24,6 @@ const Workshops: React.FC = () => {
 
         <h2>Others</h2>
         <p>At ACM Hack, we like to teach a bunch of topics that we feel could help you grow as a developer. Below are some of our other workshops that we've hosted! </p>
-        {/* <HackEventList type={'others'} /> */}
         <HackEventList type={'other'} />
       </div>
     </div>

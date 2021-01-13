@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logotext.svg';
@@ -8,6 +9,8 @@ import './style.less';
 
 const NavBar: React.FC = () => {
   const [menuState, setMenuState] = React.useState(false);
+  const location = useLocation();
+
   const toggleMenu = (): void => {
     const menuIcon = document.getElementsByClassName('menuicon')[0] as HTMLImageElement;
     const mobileLinks = document.getElementsByClassName('mobile-links')[0] as HTMLImageElement;
@@ -20,16 +23,13 @@ const NavBar: React.FC = () => {
       mobileLinks.style.display = 'block';
       setMenuState(true);
     }
-  };
-  const scrollToContacts = (): void => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
-  const scrollToDescription = (): void => {
-    document.getElementById('description')?.scrollIntoView({ behavior: 'smooth' });
-  };
-  const scrollToTeam = (): void => {
-    document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  }; 
+
+  React.useEffect(() => {
+    const elementId = location.hash ? location.hash.slice(1) : 'top';
+    document.getElementById(elementId)?.scrollIntoView({ behavior: 'smooth' });
+  }, [location]);
+
   return (
     <div className="fixed-nav">
       <div className="navbar-div">
@@ -40,7 +40,7 @@ const NavBar: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link to="#contact" onClick={scrollToContacts}>
+            <Link to="/#contact">
               Contact
             </Link>
           </li>
@@ -48,12 +48,12 @@ const NavBar: React.FC = () => {
             <Link to="/workshops">Workshops</Link>
           </li>
           <li>
-            <Link to="#team" onClick={scrollToTeam}>
+            <Link to="/#team">
               Team
             </Link>
           </li>
           <li>
-            <Link to="#description" onClick={scrollToDescription}>
+            <Link to="/#description">
               About Us
             </Link>
           </li>
@@ -72,26 +72,30 @@ const NavBar: React.FC = () => {
       <div className="wainbow" />
       <div className="mobile-links">
         <Link
-          to="#description"
+          to="/#description"
           onClick={(): void => {
             toggleMenu();
-            scrollToDescription();
           }}>
           About Us
         </Link>
         <Link
-          to="#team"
+          to="/#team"
           onClick={(): void => {
             toggleMenu();
-            scrollToTeam();
           }}>
           Team
         </Link>
         <Link
-          to="#contact"
+          to="/workshops"
           onClick={(): void => {
             toggleMenu();
-            scrollToContacts();
+          }}>
+          Workshops
+        </Link>
+        <Link
+          to="/#contact"
+          onClick={(): void => {
+            toggleMenu();
           }}>
           Contact
         </Link>

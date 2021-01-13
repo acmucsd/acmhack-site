@@ -7,7 +7,7 @@ import './style.less';
 
 const LandingCard: React.FC = () => {
   return (
-    <div className="LandingCard">
+    <div id="top" className="LandingCard">
       <div className="backdrop-wrapper">
         <img src={leftside} className="backdrop-left" alt="backdrop" />
         <img src={rightside} className="backdrop-right" alt="backdrop" />
