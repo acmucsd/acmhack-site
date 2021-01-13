@@ -47,7 +47,7 @@ const TeamCard: React.FC<Props> = ({ pic, member, role, plugs }) => {
         {plugRender
           .filter(plug => plugs[plug.name])
           .map(plugHelper => (
-            <a target="_blank" rel="noopener noreferrer" href={`${plugHelper.url}/${plugs[plugHelper.name]}`}>
+            <a key={plugHelper.name} target="_blank" rel="noopener noreferrer" href={`${plugHelper.url}/${plugs[plugHelper.name]}`}>
               {plugHelper.img}
             </a>
           ))}

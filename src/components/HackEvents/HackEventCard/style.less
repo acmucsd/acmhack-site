@@ -7,7 +7,7 @@
   background-color: @white;
   display: inline-block;
   width: 270px;
-  height: 400px;
+  height: 250px;
   border-radius: 1rem;
   box-shadow: 0 0 .3em @gray;
   margin: 1rem;
@@ -31,9 +31,20 @@
     border-top-left-radius: 20px;
     object-fit: cover;
   }
+
+  .event-info-group {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
   .info {
     padding: 0.5rem 1rem;
     vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: inherit;
+
     .time-info {
       padding-top: 0.25rem;
       p {
@@ -70,6 +81,10 @@
       a {
         overflow-wrap: anywhere;
       }
+    }
+
+    .event-info:hover {
+      transform: translateY(-5px);
     }
   }
 }

@@ -6,7 +6,7 @@ type EventsListContainerProps = {
   /**
    * Max number of events to display
    */
-  limit: number,
+  limit?: number,
   type: string
 }
 const EventsListContainer = ({ limit, type }: EventsListContainerProps) => {

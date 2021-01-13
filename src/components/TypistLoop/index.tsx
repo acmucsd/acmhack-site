@@ -30,7 +30,7 @@ const TypistLoop: React.FC<Props> = ({ words }) => {
           onTypingDone={doneTyping}>
           <Typist.Delay ms={1000} />
           {words.map((word: string) => (
-            <div>
+            <div key={word}>
               <p className="text">{` ${word}`}</p>
               <Typist.Backspace count={word.length} delay={1500} />
               <Typist.Delay ms={1000} />

@@ -6,7 +6,7 @@ type EventsListContainerProps = {
   /**
    * Max number of events to display
    */
-  limit: number
+  limit?: number
 }
 const EventsListContainer = ({ limit }: EventsListContainerProps) => {
   const [events, setEvents] = useState<Array<EventObject>>([]);

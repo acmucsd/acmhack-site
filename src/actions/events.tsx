@@ -56,7 +56,10 @@ export const getAllCommunityEvents = async (limit: number = -1): Promise<EventsA
 export const getHackData = (key: string): EventsArray => {
   if (key === 'hack.py') {
     return hackEvents['hack.py'];
-  } else {
+  } else if (key === 'other') {
+    return hackEvents['other'];
+  } else if (key === 'hackschool') {
     return hackEvents['hackschool'];
   }
+  return [];
 };

@@ -10,7 +10,7 @@ const EventList = ({ events }: EventListProps) => {
   return (
     <div className="EventList">
       {events.map((event) => {
-        return <EventCard event={event} />
+        return <EventCard key={event.uuid} event={event} />
       })}
     </div>
   );

@@ -17,7 +17,7 @@ const LandingCard: React.FC = () => {
         </div>
         <span className="landing-text">
           <h1 className="landing-title">ACM Hack</h1>
-          <TypistLoop words={['Empowering our community of software engineers.', 'Building cool things with code.']} />
+          <TypistLoop words={['Empowering our community of software engineers.', 'Building cool things with code.', 'Yes, we like to code.']} />
         </span>
       </div>
     </div>

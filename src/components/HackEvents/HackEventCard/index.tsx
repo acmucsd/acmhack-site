@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './style.less';
 import { EventObject } from 'actions/events';
-import { formatDateToMonthAndDay, formatDateToTimeWithAMPM } from 'utils/date';
-import { isURL, getAbsoluteURL } from 'utils/url';
+import { getAbsoluteURL } from 'utils/url';
 
 import { ReactComponent as Info } from '../../../assets/info.svg';
 import  { ReactComponent as GitHubLogo } from '../../../assets/github-small.svg';
-import  { ReactComponent as VideoCamera } from '../../../assets/videocamera.svg';
 
 export type EventCardProps = {
   /**
@@ -16,41 +14,26 @@ export type EventCardProps = {
   type: string
 }
 
-const HackEventCard = ({ event, type }: EventCardProps) => {
-  const [timeString, setTimeString] = useState("");
-  useEffect(() => {
-    setTimeString(`${formatDateToTimeWithAMPM(event.start)} - ${formatDateToTimeWithAMPM(event.end)}`);
-  }, [event]);
-
-  let cover = event.cover == null ? 'https://imgur.com/9yC0xBz.png' : event.cover;
-  let location = event.location == null ? 'https://acmurl.com/hack' : event.location;
+const HackEventCard = ({ event }: EventCardProps) => {
   let facebooklink = event.facebook == null ? 'https://www.facebook.com/acmucsd' : event.facebook;
   let githublink = event.github == null ? 'https://github.com/acmucsd/' : event.github;
 
   return (
     <div className="hack-event-card-wrapper">
       <div className="hack-event-card">
-        <img className="image" src={cover} alt={event.title} />
         <div className="info">
           <h1 className="title">
             {event.title}
           </h1>
-          <div className="time-info">
-            <p className="date">{formatDateToMonthAndDay(event.start)}</p>
-            <p className="time">{timeString}</p>
-          </div>
+          <p>
+            {event.description.split(" ").slice(0, 20).join(" ") + "..."}
+          </p>
           <div className="event-info-group">
             <div className="event-info">
-              <Info />
-              <p><a target="_blank" rel="noopener noreferrer" href={getAbsoluteURL(facebooklink)}>{facebooklink}</a></p>
+             <a target="_blank" rel="noopener noreferrer" href={getAbsoluteURL(facebooklink)}><Info /></a>
             </div>
             <div className="event-info">
-              <GitHubLogo />
-              <p><a target="_blank" rel="noopener noreferrer" href={getAbsoluteURL(githublink)}>{githublink}</a></p>
-            </div>
-            <div className="event-info">
-              <VideoCamera />
-              <p>{isURL(location) ? <a target="_blank" rel="noopener noreferrer" href={getAbsoluteURL(location)}>{location}</a> : location}</p>
+              <a target="_blank" rel="noopener noreferrer" href={getAbsoluteURL(githublink)}><GitHubLogo /></a>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ const Team: React.FC = () => {
       <h2>Our Team <img alt="person" src={person}></img></h2>
       <div className="teamCardContainer">
         { team.map((teamMember => (
-          <TeamCard member={teamMember.name} role={teamMember.role} pic={teamMember.profilePicture} plugs={teamMember.plugs}/>
+          <TeamCard key={teamMember.name} member={teamMember.name} role={teamMember.role} pic={teamMember.profilePicture} plugs={teamMember.plugs}/>
         )))}
       </div>
     </div>
