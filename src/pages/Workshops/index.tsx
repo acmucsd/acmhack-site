@@ -24,7 +24,6 @@ const Workshops: React.FC = () => {
 
         <h2>Others</h2>
         <p>At ACM Hack, we like to teach a bunch of topics that we feel could help you grow as a developer. Below are some of our other workshops that we've hosted! </p>
-        {/* <HackEventList type={'others'} /> */}
         <HackEventList type={'other'} />
       </div>
     </div>

@@ -10,7 +10,7 @@ import Contact from 'components/Contact';
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="App">
+      <div className="App" id="top">
         <Switch>
           <Route path="/" exact>
             <Home />

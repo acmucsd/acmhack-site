@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.less';
-import heart from '../../assets/heart.svg';
 import DescriptionImg from '../../assets/description_image.jpg';
 
 interface Props {
