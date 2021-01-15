@@ -8,6 +8,9 @@ export const siteConfigs = {
     facebook: "https://www.facebook.com/acmucsd/",
     github: "https://github.com/acmucsd",
     instagram: "https://www.instagram.com/acm.ucsd/",
+    discord: "https://www.acmurl.com/hack-disc",
+    staff: "https://acmurl.com/hacksquad",
+    projects: "https://acmurl.com/hack-projects",
   },
   contactEmail: "hack@acmucsd.org",
   committee: "Hack"
