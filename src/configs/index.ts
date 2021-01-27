@@ -13,5 +13,6 @@ export const siteConfigs = {
     projects: "https://acmurl.com/hack-projects",
   },
   contactEmail: "hack@acmucsd.org",
-  committee: "Hack"
+  committee: "Hack",
+  apiUrl: 'https://acmucsd-membership-portal-api.herokuapp.com/api/v2',
 }
