@@ -14,5 +14,5 @@ export const siteConfigs = {
   },
   contactEmail: "hack@acmucsd.org",
   committee: "Hack",
-  apiUrl: 'https://acmucsd-membership-portal-api.herokuapp.com/api/v2',
+  apiUrl: 'https://api.acmucsd.com/api/v2',
 }
